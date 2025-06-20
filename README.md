@@ -1,27 +1,5 @@
 # Multiple-Depot Vehicle Routing and Hospital Pharmacy Supply Chain Optimization
-
-> **Note:** GitHub’s default Markdown renderer does not support LaTeX formulas in a repository README. To preserve and display mathematical expressions, choose one of the following approaches:
->
-> 1. **Serve via GitHub Pages**:
->
->    * Enable Jekyll in your repo by creating an `index.md` (or using your README) with the following front matter at the top:
->
->      ```yaml
->      ---
->      title: "Project Documentation"
->      markdown: kramdown
->      kramdown:
->        math_engine: mathjax
->      ---
->      ```
->    * Write formulas with `$$ ... $$` or inline `$ ... $`. GitHub Pages will render them with MathJax.
->
-> 2. **Use a browser extension** that injects MathJax/KaTeX into GitHub (e.g., “MathJax Plugin for GitHub”).
->
-> 3. **Embed equations as images**:
->
->    * Export each formula as an image (PNG/SVG) from a LaTeX editor.
->    * Embed in Markdown: `![equation](path/to/equation.png)`.
+`![equation](path/to/equation.png)`.
 
 ## Introduction
 
