@@ -1,5 +1,5 @@
 # Multiple-Depot Vehicle Routing and Hospital Pharmacy Supply Chain Optimization
-`![equation](path/to/equation.png)`.
+
 
 ## Introduction
 
@@ -77,24 +77,30 @@ This section details the end-to-end approach, from data preprocessing to advance
   * Continuous $u_{ik}$: Remaining load of vehicle $k$ after serving node $i$.
 * **Objective function**:
 
-  $$
-    \min \sum_{k=1}^{K} \sum_{i=0}^{N} \sum_{j=0}^{N} d_{ij} \, x_{ijk}
-  $$
+ ![Objective](https://github.com/LanAnh55/Optimize/blob/main/contraints/objective.png).
 
   where $d_{ij}$ is the distance between nodes $i$ and $j$.
 
 ### 3. Core Constraints
 
-1. **Start and return**:
-   $  \sum_{j=1}^{N} x_{0jk} = 1, \quad \sum_{i=1}^{N} x_{i0k} = 1$
-2. **Service requirement**:
-   $  \sum_{k=1}^{K} \sum_{i=0}^{N} x_{i j k} = 1, \quad \forall j=1\dots N$
-3. **Capacity**:
-   $  u_{jk} = u_{ik} + q_j x_{ijk}, \quad u_{0k}=0; \quad u_{jk} \le Q$
-4. **Working time limit**:
-   $  \sum_{i=0}^{N} \sum_{j=0}^{N} \left(\frac{d_{ij}}{v} + s_j\right) x_{ijk} \le T_{max}$
-5. **Sub-tour elimination** (Miller–Tucker–Zemlin):
-   $  u_{jk} \ge u_{ik} + q_j - Q (1 - x_{ijk})$
+1. **Flow Conservation**: Ensure that the flow in and out of each node is balanced for each vehicle.
+    ![Objective](https://github.com/LanAnh55/Optimize/blob/main/contraints/constraint%201.png).
+   
+3. **Customer Assignment**: Ensure that each C is visited exactly once by one vehicle. It prevents multiple vehicles from serving the same customer
+   ![Objective](https://github.com/LanAnh55/Optimize/blob/main/contraints/constraints%202.png).
+   
+5. **CapacityConstraints**: Ensure that the total demand served by each vehicle does not exceed its capacity.It prevents over loading any vehicle
+    ![Objective](https://github.com/LanAnh55/Optimize/blob/main/contraints/constraint%203.png).
+   
+4+5. **Sub-tour Elimination** (Miller–Tucker–Zemlin):Prevent sub-tours that don’t include the depot by ensuring that the vehicle's load changes correctly between consecutive customer nodes.
+   -The variables help track the cumulative load served, ensuring that the route is connected 𝑢 𝑖 and feasible.
+   ![Objective](https://github.com/LanAnh55/Optimize/blob/main/contraints/constraints%204.png).
+   
+6. **Distance Limit**: Ensure that the total distance traveled by each vehicle does not exceed the maximum allowed distance. It reflects the practical limit of how far a vehicle can travel during its route
+   ![Objective](https://github.com/LanAnh55/Optimize/blob/main/contraints/Constraints%206.png).
+   
+8. **Time Limit**:The total time for each vehicle (including travel and service time) does not exceed the maximum allowed time. It ensures that the vehicle completes its route within the allowable working hours,respecting the time constraints imposed by regulations or operational requirements.
+   ![Objective](https://github.com/LanAnh55/Optimize/blob/main/contraints/Constraints%207.png).
 
 ### 4. Solution Strategy & Enhancements
 
@@ -127,11 +133,11 @@ This section details the end-to-end approach, from data preprocessing to advance
 
 **Route map visualization**
 
-\[Insert route map image here]
+ ![Objective](https://github.com/LanAnh55/Optimize/blob/main/image/solution.png).
 
 **Cost and time comparison chart**
 
-\[Insert comparison chart here]
+ ![Objective](https://github.com/LanAnh55/Optimize/blob/main/image/estimate.png).
 
 ---
 
@@ -158,4 +164,4 @@ This section details the end-to-end approach, from data preprocessing to advance
 ---
 
 **Version:** 1.1.0
-**Contact:** Nguyễn Thị Lan Anh ([email@domain.com](mailto:email@domain.com))
+**Contact:** Nguyễn Thị Lan Anh ([lananh2004@gmail.com](lananh2004@gmail.com))
