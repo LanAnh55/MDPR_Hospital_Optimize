@@ -136,7 +136,7 @@ This section details the end-to-end approach, from data preprocessing to advance
 
  ![Objective](https://github.com/LanAnh55/Optimize/blob/main/image/solution.png).
 
-**Cost and time comparison chart**
+**Cost and time comparison**
 
  ![Objective](https://github.com/LanAnh55/Optimize/blob/main/image/estimate.png).
 
