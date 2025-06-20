@@ -48,11 +48,7 @@ Efficient distribution of pharmaceuticals to hospitals demands accurate, timely 
 MDVRP-Pharmacy-Logistics/
 ├── data/                  # Input files (Excel, CSV)
 ├── notebooks/             # Experimental Jupyter notebooks
-├── scripts/
-│   ├── run_optimization.py  # Main execution script
-│   └── utils.py             # Helper functions (distance matrix, etc.)
 ├── results/               # Generated outputs (tables, plots)
-├── requirements.txt       # Python dependencies
 └── README.md              # Project documentation
 ```
 
