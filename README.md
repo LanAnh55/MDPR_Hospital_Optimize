@@ -165,4 +165,5 @@ This section details the end-to-end approach, from data preprocessing to advance
 ---
 
 **Version:** 1.1.0
+
 **Contact:** Nguyễn Thị Lan Anh ([lananh2004@gmail.com](lananh2004@gmail.com))
