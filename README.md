@@ -100,6 +100,7 @@ This section details the end-to-end approach, from data preprocessing to advance
    ![Objective](https://github.com/LanAnh55/Optimize/blob/main/contraints/Constraints%206.png).
    
 8. **Time Limit**:The total time for each vehicle (including travel and service time) does not exceed the maximum allowed time. It ensures that the vehicle completes its route within the allowable working hours,respecting the time constraints imposed by regulations or operational requirements.
+   
    ![Objective](https://github.com/LanAnh55/Optimize/blob/main/contraints/Constraints%207.png).
 
 ### 4. Solution Strategy & Enhancements
